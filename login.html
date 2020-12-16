@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html style="" lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Login - Kahn</title>
+    <meta name="description" content="">
+    <meta name="keywords" content=""> <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/modernizr.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Page -->
+    <div class="page" id="root">
+        <!-- UI -->
+        <div class="popup">
+            <div class="label">English</div>
+            <div class="menu-popup">
+                <div class="menu-item">English</div>
+                <div class="menu-item">Vietnam</div>
+            </div>
+        </div>
+
+        <span class="ui-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.2 25.2">
+            <path class="line top" d="M25.2,5c0,0.6-0.4,1-1,1H1C0.4,6,0,5.6,0,5l0,0c0-0.6,0.4-1,1-1h23.2C24.8,4,25.2,4.4,25.2,5L25.2,5z"/>
+            <path class="line middle" d="M25.2,12.6c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1l0,0c0-0.6,0.4-1,1-1h23.2C24.8,11.6,25.2,12.1,25.2,12.6 L25.2,12.6z"/>
+            <path class="line bottom" d="M25.2,20.2c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1l0,0c0-0.6,0.4-1,1-1h23.2C24.8,19.2,25.2,19.7,25.2,20.2 L25.2,20.2z"/>
+          </svg>
+            I want <span class="menu-large">Space</span>
+        </span>
+        <div class="menu__overlay"></div>
+        <nav class="menu">
+            <i class="menu__close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24 22.568l-1.433 1.432-10.567-10.568-10.568 10.568-1.432-1.432 10.568-10.568-10.568-10.568 1.432-1.432 10.568 10.567 10.567-10.567 1.433 1.432-10.568 10.568 10.568 10.568z"></path></svg></i>
+            <menu class="menu__item__top">
+                <a class="menu__item" href="#">Since 2015</a>
+            </menu>
+
+            <menu class="menu__top">
+                <a class="menu__item" href="about.html" tabindex="-1">About<br/><span>Kahn Atelier</span></a>
+            </menu>
+            <menu class="menu__list line-left">
+                <a class="menu__item" href="project_demo_cate1.html" tabindex="-1">Architecture</a>
+                <a class="menu__item" href="project_demo_cate1.html" tabindex="-1">Interior Design</a>
+                <a class="menu__item" href="project_demo_cate1.html" tabindex="-1">Project Management</a>
+                <a class="menu__item " href="project_demo_cate1.html" tabindex="-1">Construction</a>
+                <a class="menu__item " href="project_demo_cate1.html" tabindex="-1">Icon Design</a>
+                <a class="menu__item " href="project_demo_cate1.html" tabindex="-1">Furniture</a>
+            </menu>
+            <menu class="menu__content">
+                <a class="menu__item" href="staffs.html" tabindex="-1">Staffs</a>
+                <a class="menu__item" href="Portfolio.html" tabindex="-1">Portfolio</a>
+                <a class="menu__item" href="process.html" tabindex="-1">Process</a>
+                <a class="menu__item " href="storytelling.html" tabindex="-1">Storytelling</a>
+                <a class="menu__item " href="Contact-us.html" tabindex="-1">Contact us</a>
+            </menu>
+            <footer class="menu__footer">
+                <a href="login.html" class="menu__login">Log in</a>                
+            </footer>
+        </nav>
+        <div class="panel__overlay"></div>
+
+        <!--/UI -->
+        <!-- Promo -->
+        <section class="login">
+          <a class="ui-logo " href="home.html"></a>
+          <div class="login__form animation-element slide-down">
+            <div class="wrapper-login">
+              <div class="line-left"></div>
+              <h1>Nice to meet you again!</h1>
+              <form action="#" class="form">
+                <div class="form-group row">
+                  <label for="Username" class="col-sm-4 col-form-label">Username</label>
+                  <div class="col-sm-8">
+                    <input type="text" class="form-control" id="Username">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="Password" class="col-sm-4 col-form-label">Password</label>
+                  <div class="col-sm-8">
+                    <input type="Password" class="form-control" id="Password">
+                  </div>
+                </div>
+                <button type="submit" id="login-button">Login</button>
+              </form>
+              <div class="line-bottom"></div>
+            </div>
+          </div>
+        </section>
+
+
+
+    </div>
+    <!--/Page -->
+    <!-- JS -->    
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+<script type="text/javascript">
+        $(document).ready(function () {
+          $(".popup").addClass("animation-reveal");
+          $(".popup").css("opacity", "0");
+          setTimeout(() => {
+            $(".popup").removeClass("animation-reveal");
+            $(".popup").css("opacity", "1");
+          }, 1000);
+        });
+
+        $(function () {
+          $(".label").on("click", function () {
+            $(this).parent().removeClass("close");
+            $(this).parent().addClass("open");
+        });
+
+          $(".menu-item").on("click", function () {
+            $(this)
+              .parent()
+              .parent()
+              .addClass("close")
+              .children(".label")
+              .text($(this).text());
+            setTimeout(() => {
+              $(this).removeClass("open");
+            }, 400);
+          });
+
+  $(document).on("keyup", function (event) {
+    if ((event.keyCode || event.which) === 27) {
+      $(".popup").addClass("close");
+      setTimeout(() => {
+        $(".popup").removeClass("open");
+      }, 400);
+    }
+  });
+
+  $(document).on("click", function (event) {
+    if ($(event.target).closest(".label").length === 0) {
+      $(".popup").addClass("close");
+      setTimeout(() => {
+        $(".popup").removeClass("open");
+      }, 400);
+    }
+  });
+});
+
+ $("#login-button").click(function(event){
+         event.preventDefault();
+
+     $('form').fadeOut(500);
+     $('.wrapper-login').addClass('form-success');
+});
+
+</script>
+
+</body>
+
+</html>
